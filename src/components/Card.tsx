@@ -1,6 +1,15 @@
 import * as React from 'react';
 
-const Card = ({ name, email, id }) => {
+import { IRobot } from '../containers/App';
+
+// interface CardStatelessProps {
+//   name: string,
+//   email: string,
+//   id: number
+// }
+
+// const Card: React.SFC<CardStatelessProps> = ({ name, email, id }) => {
+const Card = ({ name, email, id }: IRobot) => {
   return (
     <div className='tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5'>
       <img alt='robots' src={`https://robohash.org/${id}?200x200`} />

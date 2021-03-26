@@ -1,7 +1,14 @@
 import * as React from 'react';
 import Card from './Card';
 
-const CardList = ({ robots }) => {
+import { IRobot } from '../containers/App';
+
+interface ICardListProps {
+  robots: Array<IRobot>
+}
+
+// const CardList = ({ robots }: { robots: Array<IRobot> }) => {
+const CardList = ({ robots }: ICardListProps) => {
   return (
     <div>
       {
@@ -12,7 +19,7 @@ const CardList = ({ robots }) => {
               id={robots[i].id}
               name={robots[i].name}
               email={robots[i].email}
-              />
+            />
           );
         })
       }
